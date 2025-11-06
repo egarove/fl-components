@@ -1,3 +1,4 @@
+import 'package:fl_components/routes/app_routes.dart';
 import 'package:fl_components/screens/screens.dart';
 import 'package:flutter/material.dart';
 
@@ -14,17 +15,17 @@ class HomeScreen extends StatelessWidget {
       ),
       body: ListView.separated(
         itemBuilder: (context, index) => ListTile(
-            leading: Icon(Icons.markunread_sharp),
-            title: Text('ruta'),
+            leading: Icon(AppRoutes.MenuOptions[index].icon),
+            title: Text(AppRoutes.MenuOptions[index].name),
             onTap: () {
               final route = MaterialPageRoute(builder: (context) => ListviewScreen(),);
               // Navigator.pushReplacement(context, route); //push añade la flecha para poder volver atras
               // Navigator.pushReplacement(context, route); //pushReplacement borra la flecha para poder volver atras
-              Navigator.pushNamed(context, "card"); //me permite usar solo el nombre de la ruta
+              Navigator.pushNamed(context, AppRoutes.MenuOptions[index].route); //me permite usar solo el nombre de la ruta
             },
           ),
         separatorBuilder: (context, index) => Divider(),
-        itemCount: 5,
+        itemCount: AppRoutes.MenuOptions.length,
       )
     );
   }
