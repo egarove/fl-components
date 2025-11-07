@@ -4,7 +4,7 @@ class GalioScreen extends StatelessWidget {
    
   const GalioScreen({Key? key}) : super(key: key);
 
-  final String galioDescription = "Galio es un coloso de piedra que vigila las afueras de Demacia y"+
+  final String description = "Galio es un coloso de piedra que vigila las afueras de Demacia y"+
          "protege a su ciudad de la magia. Fue construido por el escultor Durand para ser un"+
          "baluarte contra los magos enemigos, permanece inmóvil hasta que la presencia de magia"+
          "poderosa lo despierta. Sus habilidades le permiten infligir daño masivo en área,"+
@@ -23,7 +23,7 @@ class GalioScreen extends StatelessWidget {
         children: [
           Text("Galio Info"),
           //AQUI VA LA IMAGEN
-          Text(galioDescription)
+          Text(description)
         ],
       ),
     );
