@@ -35,9 +35,14 @@ class AppRoutes {
     MenuOption(
       route: 'card',
       icon: Icons.card_giftcard_outlined,
-      name: 'Card',
+      name: 'Cards',
       screen: CardScreen()
-    )
+    ),
+    MenuOption(
+      route: 'campeones',
+      icon: Icons.airline_seat_recline_normal_outlined,
+      name: 'Campeones',
+      screen: CampeonesScreen())
   ];
 
   static Map<String, Widget Function(BuildContext) > getAppRoutes(){
