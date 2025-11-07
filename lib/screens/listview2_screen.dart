@@ -13,7 +13,7 @@ class Listview2Screen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Listview Campeones'),
-        backgroundColor: Colors.amberAccent,
+        //backgroundColor: Colors.amberAccent,
       ),
       body: ListView.separated(
         itemBuilder: (context, index) => ListTile(

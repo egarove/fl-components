@@ -12,7 +12,7 @@ class ListviewScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Listview Campeones'),
-        backgroundColor: Colors.amberAccent,
+        //backgroundColor: Colors.amberAccent, podemos modifiar el appBar pero lo comento para que pille el formato del appBar home
       ),
       body: ListView(
         children: [
