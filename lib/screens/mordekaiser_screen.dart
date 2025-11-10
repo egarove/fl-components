@@ -18,13 +18,25 @@ class MordekaiserScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Campeones: Mordekaiser'),
-        backgroundColor: Color(0xFF6bb39b) //0xFF antes del color a usar
+        backgroundColor: Color.fromARGB(255, 55, 16, 75) //0xFF antes del color a usar
       ),
+      backgroundColor: Color(0xFF121212),
       body: Column(
-        children: [
-          Text("Mordekaiser Info"),
-          //AQUI VA LA IMAGEN
-          Text(description)
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children:  [
+          Text("Mordekaiser Info",
+            style: TextStyle(
+              fontSize: 24,
+              color: const Color.fromARGB(255, 84, 23, 124),
+              )
+            ),
+          Image.network("https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Mordekaiser_42.jpg"),
+          Text(description,
+            style: TextStyle(
+              fontSize: 24,
+              color: const Color.fromARGB(255, 95, 52, 144),
+            ) 
+          ,)
         ],
       ),
     );

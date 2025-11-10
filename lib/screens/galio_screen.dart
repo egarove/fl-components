@@ -11,19 +11,31 @@ class GalioScreen extends StatelessWidget {
          "mientras que su escudo le otorga defensa y control de masas a través de una provocación."+
          "Su definitiva (Entrada heroica) le permite volar hacia un aliado, lo que le otorga reducción de"+
          "daño y crea una onda de choque que derriba a los enemigos";
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Campeones: Galio'),
-        backgroundColor: Color(0xFFE3F5E9) //0xFF antes del color a usar
+        backgroundColor: Color.fromARGB(255, 25, 45, 32) //0xFF antes del color a usar
       ),
+      backgroundColor: Color(0xFF121212),
       body: Column(
-        children: [
-          Text("Galio Info"),
-          //AQUI VA LA IMAGEN
-          Text(description)
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children:  [
+          Text("Galio Info",
+            style: TextStyle(
+              fontSize: 24,
+              color: const Color.fromARGB(255, 89, 152, 133),
+              )
+            ),
+          Image.network("https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Galio_4.jpg"),
+          Text(description,
+            style: TextStyle(
+              fontSize: 24,
+              color: const Color.fromARGB(255, 89, 152, 133),
+            ) 
+          ,)
         ],
       ),
     );

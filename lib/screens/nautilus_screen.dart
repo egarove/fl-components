@@ -19,13 +19,25 @@ class NautilusScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Campeones: Nautilus'),
-        backgroundColor: Color(0xFF7c701f) //0xFF antes del color a usar
+        backgroundColor: Color.fromARGB(255, 184, 138, 38) //0xFF antes del color a usar
       ),
+      backgroundColor: Color.fromARGB(255, 71, 71, 71),
       body: Column(
-        children: [
-          Text("Nautilus Info"),
-          //AQUI VA LA IMAGEN
-          Text(description)
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children:  [
+          Text("Nautilus Info",
+            style: TextStyle(
+              fontSize: 24,
+              color: const Color.fromARGB(255, 199, 162, 31),
+              )
+            ),
+          Image.network("https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/nautilus/skins/skin03/images/nautilus_splash_centered_3.jpg"),
+          Text(description,
+            style: TextStyle(
+              fontSize: 24,
+              color: const Color.fromARGB(255, 217, 177, 47),
+            ) 
+          ,)
         ],
       ),
     );

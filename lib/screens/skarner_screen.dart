@@ -19,13 +19,25 @@ class SkarnerScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Campeones: Skarner'),
-        backgroundColor: Color(0xFFec6c2b) //0xFF antes del color a usar
+        backgroundColor: Color.fromARGB(255, 162, 52, 27) //0xFF antes del color a usar
       ),
+      backgroundColor: Color.fromARGB(255, 38, 38, 38),
       body: Column(
-        children: [
-          Text("Skarner Info"),
-          //AQUI VA LA IMAGEN
-          Text(description)
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children:  [
+          Text("Nautilus Info",
+            style: TextStyle(
+              fontSize: 24,
+              color: const Color.fromARGB(255, 184, 31, 31),
+              )
+            ),
+          Image.network("https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Skarner_1.jpg"),
+          Text(description,
+            style: TextStyle(
+              fontSize: 24,
+              color: const Color.fromARGB(255, 227, 76, 38),
+            ) 
+          ,)
         ],
       ),
     );
