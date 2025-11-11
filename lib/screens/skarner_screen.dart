@@ -31,7 +31,9 @@ class SkarnerScreen extends StatelessWidget {
               color: const Color.fromARGB(255, 184, 31, 31),
               )
             ),
-          Image.network("https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Skarner_1.jpg"),
+          Image.network("https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Skarner_1.jpg",
+            width: 330
+          ),
           Text(description,
             style: TextStyle(
               fontSize: 24,
