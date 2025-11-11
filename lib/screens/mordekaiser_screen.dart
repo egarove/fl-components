@@ -30,7 +30,9 @@ class MordekaiserScreen extends StatelessWidget {
               color: const Color.fromARGB(255, 84, 23, 124),
               )
             ),
-          Image.network("https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Mordekaiser_42.jpg"),
+          Image.network("https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Mordekaiser_42.jpg",
+            width: MediaQuery.of(context).size.width * 0.9,
+          ),
           Text(description,
             style: TextStyle(
               fontSize: 24,

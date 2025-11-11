@@ -32,7 +32,7 @@ class SkarnerScreen extends StatelessWidget {
               )
             ),
           Image.network("https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Skarner_1.jpg",
-            width: 330
+            width: MediaQuery.of(context).size.width * 0.9,
           ),
           Text(description,
             style: TextStyle(

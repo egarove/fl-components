@@ -31,7 +31,8 @@ class NautilusScreen extends StatelessWidget {
               color: const Color.fromARGB(255, 199, 162, 31),
               )
             ),
-          Image.network("https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/nautilus/skins/skin03/images/nautilus_splash_centered_3.jpg"),
+          Image.network("https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/nautilus/skins/skin03/images/nautilus_splash_centered_3.jpg",
+          width: MediaQuery.of(context).size.width * 0.9,),
           Text(description,
             style: TextStyle(
               fontSize: 24,

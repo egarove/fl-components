@@ -29,8 +29,9 @@ class GalioScreen extends StatelessWidget {
               color: const Color.fromARGB(255, 89, 152, 133),
               )
             ),
-          Image.network("https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Galio_4.jpg",
-            width: 350 //AJUSTO EL TAMAÑO DE LA IMAGEN PARA QUE NO SE SALGA
+          Image.network(
+            "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Galio_4.jpg",
+            width: MediaQuery.of(context).size.width * 0.9,
           ),
           Text(description,
             style: TextStyle(
