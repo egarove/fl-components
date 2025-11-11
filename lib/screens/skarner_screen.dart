@@ -35,7 +35,7 @@ class SkarnerScreen extends StatelessWidget {
             width: MediaQuery.of(context).size.width * 0.9,
           ),
           Text(description,
-            style: TextStyle(
+            style: TextStyle(              
               fontSize: 24,
               color: const Color.fromARGB(255, 227, 76, 38),
             ) 
