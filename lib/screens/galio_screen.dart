@@ -35,7 +35,7 @@ class GalioScreen extends StatelessWidget {
           ),
           Text(description,
             style: TextStyle(
-              fontSize: 24,
+              fontSize: 16,
               color: const Color.fromARGB(255, 89, 152, 133),
             ) 
           ,)

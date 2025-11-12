@@ -35,7 +35,7 @@ class MordekaiserScreen extends StatelessWidget {
           ),
           Text(description,
             style: TextStyle(
-              fontSize: 24,
+              fontSize: 16,
               color: const Color.fromARGB(255, 95, 52, 144),
             ) 
           ,)

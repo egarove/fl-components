@@ -35,7 +35,7 @@ class NautilusScreen extends StatelessWidget {
           width: MediaQuery.of(context).size.width * 0.9,),
           Text(description,
             style: TextStyle(
-              fontSize: 24,
+              fontSize: 16,
               color: const Color.fromARGB(255, 217, 177, 47),
             ) 
           ,)

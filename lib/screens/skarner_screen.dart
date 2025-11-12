@@ -25,7 +25,7 @@ class SkarnerScreen extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children:  [
-          Text("Nautilus Info",
+          Text("Skarner Info",
             style: TextStyle(
               fontSize: 24,
               color: const Color.fromARGB(255, 184, 31, 31),
@@ -36,7 +36,7 @@ class SkarnerScreen extends StatelessWidget {
           ),
           Text(description,
             style: TextStyle(              
-              fontSize: 24,
+              fontSize: 16,
               color: const Color.fromARGB(255, 227, 76, 38),
             ) 
           ,)
