@@ -17,7 +17,14 @@ class CardScreen extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20), //espacio en los lados
           children: [
             CustomCardTipo1(),
-            CustomCardTipo1()
+            SizedBox(height: 10,),
+            CustomCardTipo2(imageUrl: "https://www.mobafire.com/images/champion/skins/landscape/tahm-kench-high-noon-762x.jpg", description: 'Tahm Kench',),
+            SizedBox(height: 10,),
+            CustomCardTipo2(imageUrl: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Maokai_2.jpg", description: "Maokai",),
+            SizedBox(height: 10,),
+            CustomCardTipo2(imageUrl: "https://www.mobafire.com/images/champion/skins/landscape/nautilus-crystalis-indomitus-762x.jpg", description: "Nautilus"),
+            SizedBox(height: 10,),
+            CustomCardTipo2(imageUrl: "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/shaco/skins/skin03/images/shaco_splash_centered_3.jpg", description: "Shako")
           ],
          )
       ),

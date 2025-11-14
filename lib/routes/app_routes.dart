@@ -42,7 +42,7 @@ class AppRoutes {
       route: 'campeones',
       icon: Icons.airline_seat_recline_normal_outlined,
       name: 'Campeones',
-      screen: CampeonesScreen())
+      screen: CampeonesScreen()),
   ];
 
   static Map<String, Widget Function(BuildContext) > getAppRoutes(){
