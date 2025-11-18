@@ -19,6 +19,21 @@ class AppTheme {
 
         textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(foregroundColor: AppTheme.primary),
+        ),
+
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+          backgroundColor: primary,
+          foregroundColor: Colors.white,
+          elevation: 5,
+        ),
+
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            foregroundColor: primary,
+            shape: CircleBorder(), //forma redondeada
+            fixedSize: Size(300, 300), //mas grande para que el circulo no se corte
+          )
+
         )
   );
 }

@@ -35,13 +35,13 @@ class AppRoutes {
     MenuOption(
       route: 'card',
       icon: Icons.card_giftcard_outlined,
-      name: 'Cards',
+      name: 'Champion Cards',
       screen: CardScreen()
     ),
     MenuOption(
       route: 'campeones',
       icon: Icons.airline_seat_recline_normal_outlined,
-      name: 'Campeones',
+      name: 'Champion Screens',
       screen: CampeonesScreen()),
   ];
 
