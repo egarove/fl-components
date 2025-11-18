@@ -36,7 +36,7 @@ class CardScreen extends StatelessWidget {
             SizedBox(height: 10,),
             CustomCardTipo2(imageUrl: "https://fbi.cults3d.com/uploaders/25822624/illustration-file/7bef1372-eb08-407b-8f5f-e15a695ee39b/splashart.jpg", description: "Singed"),
             SizedBox(height: 10,),
-            CustomCardTipo2(imageUrl: "hhttps://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rengar/skins/skin15/images/rengar_splash_centered_15.jpg", description: "Rengar"),
+            CustomCardTipo2(imageUrl: "https://cdn-offer-photos.zeusx.com/f05ad0b7-108b-4684-a8e2-dcbba1ae7095.jpg", description: "Rengar"),
           ],          
          )
       ),
