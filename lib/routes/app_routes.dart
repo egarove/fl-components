@@ -43,6 +43,16 @@ class AppRoutes {
       icon: Icons.airline_seat_recline_normal_outlined,
       name: 'Champion Screens',
       screen: CampeonesScreen()),
+    MenuOption(
+      route: 'avatar',
+      icon: Icons.supervised_user_circle_outlined,
+      name: 'Avatar',
+      screen: AvatarScreen()),
+    MenuOption(
+      route: 'container',
+      icon: Icons.indeterminate_check_box_outlined,
+      name: 'Container',
+      screen: ContainerScreen()),
   ];
 
   static Map<String, Widget Function(BuildContext) > getAppRoutes(){

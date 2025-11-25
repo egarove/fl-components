@@ -9,3 +9,5 @@ export 'package:fl_components/screens/galio_screen.dart';
 export 'package:fl_components/screens/nautilus_screen.dart';
 export 'package:fl_components/screens/mordekaiser_screen.dart';
 export 'package:fl_components/screens/skarner_screen.dart';
+export 'package:fl_components/screens/avatar_screen.dart';
+export 'package:fl_components/screens/container_screen.dart';
