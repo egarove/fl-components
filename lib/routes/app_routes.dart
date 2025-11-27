@@ -53,6 +53,11 @@ class AppRoutes {
       icon: Icons.indeterminate_check_box_outlined,
       name: 'Container',
       screen: ContainerScreen()),
+    MenuOption(
+      route: 'inputs',
+      icon: Icons.format_align_center,
+      name: 'Forms: inputs',
+      screen: InputsScreen()),
   ];
 
   static Map<String, Widget Function(BuildContext) > getAppRoutes(){
