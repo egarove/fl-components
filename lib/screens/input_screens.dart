@@ -1,3 +1,4 @@
+import 'package:fl_components/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 class InputsScreen extends StatelessWidget {
@@ -12,35 +13,59 @@ class InputsScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(vertical: 50, horizontal: 50),
-        child: Column(
-          children: [
-            TextFormField(
-              autofocus: true, //nad mas entrar al formulario se abre
-              //initialValue: 'Tahm Kench',
-              textCapitalization: TextCapitalization.words, //pone la primera letra mayusc al hacer espacio
-              onChanged: (value) { //con onchanged podemosvalidar los datos a tiempo real
-                print("Valor: "+value);
-              },
-              validator: (valor) {
-                if (valor!.length<7){
-                  return '+8 caracteres';
-                }
-              },
-              autovalidateMode: AutovalidateMode.onUserInteraction, //cuando el usuario hace una interaccion
-              decoration: InputDecoration(
-                hintText: 'Usuario',
-                labelText: 'Nombre', //muy recomendable para moviles
-                helperText: 'Solo letras', //ayuda (si falla la validacion no sale)
-                suffixIcon: Icon(Icons.supervised_user_circle_rounded), //icono a la derecha 
-                icon: Icon(Icons.verified_rounded),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(15), topRight: Radius.circular(15)),
-                )
+        child: Form(
+          child: Column(
+            children: [
+              CustomTextFormField(
+                helperText: "Solo letras",
+                hintText: "Pista: Nombre",
+                labelText: "Nombre",
+                icon: Icons.supervised_user_circle_rounded,
+                suffixIcon: Icons.verified_rounded,
+                minCharacters: 8,
               ),
-            )
-          ],
+              SizedBox(height: 30,),
+              CustomTextFormField(
+                helperText: "Solo letras",
+                hintText: "Pista: Apellidos",
+                labelText: "Apellidos",
+                icon: Icons.forest_rounded,
+                suffixIcon: Icons.verified_rounded,
+                minCharacters: 10,
+              ),
+              SizedBox(height: 30,),
+              CustomTextFormField(
+                helperText: "Solo letras",
+                hintText: "Pista: Email",
+                labelText: "Email",
+                icon: Icons.email_rounded,
+                suffixIcon: Icons.verified_rounded,
+                minCharacters: 10,
+                keyboardType: TextInputType.emailAddress,
+              ),
+              SizedBox(height: 30,),
+              CustomTextFormField(
+                helperText: "Secreto",
+                hintText: "Pista: Contraseña",
+                labelText: "Contraseña",
+                icon: Icons.password_rounded,
+                suffixIcon: Icons.verified_rounded,
+                minCharacters: 8,
+                obscureText: true,
+              ),     
+              SizedBox(height: 50,),
+              ElevatedButton(
+                child: SizedBox(
+                  child: Center(child: Text("Enviar")),
+                  width: double.infinity,
+                ),
+                onPressed: () => {},
+              )       
+            ],          
+          ),
         )
       ),
     );
   }
 }
+
