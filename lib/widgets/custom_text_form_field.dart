@@ -11,6 +11,9 @@ class CustomTextFormField extends StatelessWidget {
   final TextInputType? keyboardType;
   final bool obscureText;
 
+  final String formProperty;
+  final Map<String,String> formValues;
+
   const CustomTextFormField({
     super.key,
     this.hintText,
@@ -21,6 +24,8 @@ class CustomTextFormField extends StatelessWidget {
     this.minCharacters,
     this.keyboardType,
     this.obscureText= false, //por defecto no esconde las palabras
+    required this.formProperty,
+    required this.formValues,
   });
 
   @override
@@ -31,8 +36,8 @@ class CustomTextFormField extends StatelessWidget {
       textCapitalization: TextCapitalization.words, //pone la primera letra mayusc al hacer espacio
       keyboardType: keyboardType, //añade @ en el teclado para facilitar
       obscureText: obscureText,
-      onChanged: (value) { //con onchanged podemosvalidar los datos a tiempo real
-        print("Valor: "+value);
+      onChanged: (value) { //con onchanged podemos tratar los datos a tiempo real
+        formValues[formProperty] = value; //guarda los datos a timepo real en mi map de formvalues
       },
       validator: (valor) {
         if (valor!.length<(minCharacters!-1)){
