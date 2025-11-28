@@ -16,7 +16,7 @@ class InputsScreen extends StatelessWidget {
       'apellidos' : 'Kench',
       'email' : 'tahmkench@aguasestancadas.com',
       'password' : '12345',
-      'rol' : 'usuario',
+      'rol' : 'polivalente',
     };
 
     return Scaffold(
@@ -74,6 +74,19 @@ class InputsScreen extends StatelessWidget {
                 formValues: formData,
                 formProperty: 'password',
               ),     
+              SizedBox(height: 50,),
+              DropdownButtonFormField(
+                items: [
+                  DropdownMenuItem(child: Text('Support'), value: 'support',),
+                  DropdownMenuItem(child: Text('Jungla'), value: 'jungla',),
+                  DropdownMenuItem(child: Text('ADC'), value: 'adc',),
+                  DropdownMenuItem(child: Text('Top Lane'), value: 'top',),
+                  DropdownMenuItem(child: Text('Mid Lane'), value: 'mid',),
+                ],
+                onChanged: ((value) {
+                  formData['rol'] = value ?? 'polivalente'; //por defecto polivante para que no pete
+                }),
+              ),
               SizedBox(height: 50,),
               ElevatedButton(
                 child: SizedBox(
