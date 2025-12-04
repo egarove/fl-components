@@ -58,6 +58,11 @@ class AppRoutes {
       icon: Icons.format_align_center,
       name: 'Forms: inputs',
       screen: InputsScreen()),
+      MenuOption(
+      route: 'listviewbuilder',
+      icon: Icons.list_alt_rounded,
+      name: 'Scroll infinito',
+      screen: ListViewBuilderScreen()),
   ];
 
   static Map<String, Widget Function(BuildContext) > getAppRoutes(){
