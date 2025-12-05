@@ -1,4 +1,6 @@
 
+import 'dart:ui';
+
 import 'package:fl_components/routes/app_routes.dart';
 import 'package:fl_components/screens/screens.dart';
 import 'package:fl_components/theme/app_theme.dart';
@@ -13,6 +15,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      scrollBehavior: const MaterialScrollBehavior().copyWith( //para poder desplazar pinchando con el raton en windows
+        dragDevices: {
+          PointerDeviceKind.mouse,
+        }
+      ),
       debugShowCheckedModeBanner: false,
       title: 'Material App',
       //home: Listview2Screen(),
