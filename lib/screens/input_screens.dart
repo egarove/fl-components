@@ -1,3 +1,4 @@
+import 'package:fl_components/screens/bienvenida_screen.dart';
 import 'package:fl_components/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -35,7 +36,7 @@ class InputsScreen extends StatelessWidget {
                 labelText: "Nombre",
                 icon: Icons.supervised_user_circle_rounded,
                 suffixIcon: Icons.verified_rounded,
-                minCharacters: 8,
+                minCharacters: 3,
                 formValues: formData,
                 formProperty: 'nombre',
               ),
@@ -97,7 +98,13 @@ class InputsScreen extends StatelessWidget {
                   FocusScope.of(context).requestFocus(FocusNode()); //cuando le demos a "enviar" se quita el teclado
                   if( !myFormKey.currentState!.validate() ){
                     print('Formulario no valido');
-                  } 
+                  } else{
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) => BienvenidaScreen(
+                        formData: formData
+                      ),
+                    ),);
+                  }
                   print(formData);
                 },
               )       
