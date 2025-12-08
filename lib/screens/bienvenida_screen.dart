@@ -10,10 +10,21 @@ class BienvenidaScreen extends StatelessWidget {
   Widget build(BuildContext context) {
 
     final nombre = formData['nombre'] ?? 'Invitado';
+    final apellidos = formData['apellidos'] ?? 'Invitado';
 
     return Scaffold(
       appBar: AppBar(
         title: Text(''),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0), //para que no se pegue tanto a la derecha
+            child: CircleAvatar(            
+              child: 
+                Text(apellidos[0]),
+                backgroundColor: const Color.fromARGB(255, 138, 163, 175),
+            ),
+          )
+        ],
         backgroundColor: const Color.fromARGB(255, 84, 190, 111),
         elevation: 50,
       ),
