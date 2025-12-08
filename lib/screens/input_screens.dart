@@ -2,10 +2,15 @@ import 'package:fl_components/screens/bienvenida_screen.dart';
 import 'package:fl_components/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
-class InputsScreen extends StatelessWidget {
+class InputsScreen extends StatefulWidget {
    
   const InputsScreen({Key? key}) : super(key: key);
-  
+
+  @override
+  State<InputsScreen> createState() => _InputsScreenState();
+}
+
+class _InputsScreenState extends State<InputsScreen> {
   @override
   Widget build(BuildContext context) {
 
@@ -19,6 +24,8 @@ class InputsScreen extends StatelessWidget {
       'password' : '12345',
       'rol' : 'polivalente',
     };
+
+    bool _termsAccepted = false;
 
     return Scaffold(
       appBar: AppBar(
@@ -89,6 +96,16 @@ class InputsScreen extends StatelessWidget {
                 }),
               ),
               SizedBox(height: 50,),
+              Checkbox(
+                value: _termsAccepted, 
+                onChanged:  (value) {
+                  _termsAccepted = value ?? true;
+                  setState(() {
+              
+                  });
+                }
+              ),
+              Text('Acepto las condiciones'),
               ElevatedButton(
                 child: SizedBox(
                   child: Center(child: Text("Enviar")),
@@ -96,7 +113,7 @@ class InputsScreen extends StatelessWidget {
                 ),
                 onPressed: () {
                   FocusScope.of(context).requestFocus(FocusNode()); //cuando le demos a "enviar" se quita el teclado
-                  if( !myFormKey.currentState!.validate() ){
+                  if( !myFormKey.currentState!.validate() && _termsAccepted ){
                     print('Formulario no valido');
                   } else{
                     Navigator.push(context, MaterialPageRoute(
@@ -106,7 +123,7 @@ class InputsScreen extends StatelessWidget {
                     ),);
                   }
                   print(formData);
-                },
+                }
               )       
             ],          
           ),

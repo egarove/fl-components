@@ -63,6 +63,11 @@ class AppRoutes {
       icon: Icons.list_alt_rounded,
       name: 'Scroll infinito',
       screen: ListViewBuilderScreen()),
+      MenuOption(
+      route: 'slider',
+      icon: Icons.list_alt_rounded,
+      name: 'Slider',
+      screen: const SliderScreen()),
   ];
 
   static Map<String, Widget Function(BuildContext) > getAppRoutes(){

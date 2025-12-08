@@ -13,3 +13,4 @@ export 'package:fl_components/screens/avatar_screen.dart';
 export 'package:fl_components/screens/container_screen.dart';
 export 'package:fl_components/screens/input_screens.dart';
 export 'package:fl_components/screens/listview_builder_screen.dart';
+export 'package:fl_components/screens/slider_screen.dart';
