@@ -1,3 +1,4 @@
+import 'package:fl_components/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class ListViewBuilderScreen extends StatefulWidget {
@@ -60,24 +61,61 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
 
   @override
   Widget build(BuildContext context) {
+
+    final size = MediaQuery.of(context).size; //obtengo el tamaño de la pantalla
+
+
     return Scaffold(
       body: MediaQuery.removePadding( //soluciona el problema de que con la camara integrada en la pantalla aparece una linea en blanco
         context: context,
         removeTop: true,
         removeBottom: true,
-        child: ListView.builder(
-          controller: scrollController,
-          itemCount: imageIds.length,
-          itemBuilder: (BuildContext context, int index) {
-            return FadeInImage(
-              width: double.infinity,
-              height: 250,
-              fit: BoxFit.cover,
-              placeholder: AssetImage("assets/jar-loading.gif"),
-              image: NetworkImage("https://picsum.photos/500/600?image=${imageIds[index]}")
-            );
-          },
+        child: Stack(
+          children: [
+            ListView.builder(
+              controller: scrollController,
+              itemCount: imageIds.length,
+              itemBuilder: (BuildContext context, int index) {
+                return FadeInImage(
+                  width: double.infinity,
+                  height: 250,
+                  fit: BoxFit.cover,
+                  placeholder: AssetImage("assets/jar-loading.gif"),
+                  image: NetworkImage("https://picsum.photos/500/600?image=${imageIds[index]}")
+                );
+              },
+            ),
+            if (isLoading)
+              Positioned(
+                child: _loadingIcon(),
+                bottom: 25,
+                left: (size.width/2)-30,
+              )
+          ],
         ),
+      ),
+    );
+  }
+}
+
+class _loadingIcon extends StatelessWidget {
+  const _loadingIcon({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: Container(
+        padding: EdgeInsets.all(15),
+        decoration: BoxDecoration(
+          color: Colors.white.withValues(alpha: 0.25), //para la opacidad
+          shape: BoxShape.circle,
+        ),
+        height: 60,
+        width: 60,
+        child: CircularProgressIndicator(color: AppTheme.primary,),
       ),
     );
   }
